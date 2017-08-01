@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
     table.string('name');
     table.string('description');
     table.string('image');
+    table.boolean('at_home');
   })
 };
 

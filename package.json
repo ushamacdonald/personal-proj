@@ -40,7 +40,9 @@
     "express": "^4.14.0",
     "knex": "^0.13.0",
     "migrations": "^0.1.6",
+    "react-router-dom": "^4.1.2",
     "seeds": "^2.3.1",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^3.1.8",
+    "superagent": "^3.5.2"
   }
 }
