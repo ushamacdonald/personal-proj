@@ -1,10 +1,13 @@
 import React from 'react'
+import Flatties from './Flatties'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <div className="container">
+        <h1> Flat App </h1>
+        <Flatties />
+    </div>
   )
 }
 
 export default App
-
