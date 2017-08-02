@@ -39,7 +39,7 @@ class App extends React.Component {
       <div className="container">
         <AppRoutes
         flatties={this.state.flatties} fetchFlatties={this.fetchFlatties}
-        shoppingList={this.state.shoppingList} fetchShopping={this.fetchFlatties}
+        shoppingList={this.state.shoppingList} fetchShopping={this.fetchShopping.bind(this)}
         />
       {this.state.errorMessage &&
         <h1>{this.state.errorMessage}</h1>

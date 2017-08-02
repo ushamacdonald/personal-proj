@@ -18,4 +18,15 @@ router.get('/shopping', (req,res) => {
     })
 })
 
+router.post('/shopping', (req,res) => {
+  var knex = req.app.get('db')
+  console.log(req.body.item);
+  var insert = {item: req.body.item}
+  knex('shoppingList')
+    .insert(insert)
+    .then(shoppingList => {
+      res.json(shoppingList)
+    })
+})
+
 module.exports = router

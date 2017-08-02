@@ -18,7 +18,7 @@ class AppRoutes extends React.Component {
             />
           <Route
             path='/' render={(props) =>
-            <ShoppingList shoppingList={this.props.shoppingList} fetchFlatties={this.props.fetchShopping} {...props}
+            <ShoppingList shoppingList={this.props.shoppingList} fetchShopping={this.props.fetchShopping} {...props}
               />
           }
           />
