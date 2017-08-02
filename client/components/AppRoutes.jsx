@@ -8,17 +8,13 @@ class AppRoutes extends React.Component {
     return (
       <div className="appContainer">
         <Router>
-        <Route
-          exact
-          path='/'
-          render={(props) =>
-            <Flatties
-              flatties={this.props.flatties}
-              fetchFlatties={this.props.fetchFlatties}
-              {...props}
-            />
-          }
-        />
+          <Route
+            exact path='/'
+            render={(props) =>
+              <Flatties flatties={this.props.flatties} fetchFlatties={this.props.fetchFlatties} {...props}
+              />
+            }
+          />
         </Router>
       </div>
     )

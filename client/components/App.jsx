@@ -16,15 +16,12 @@ class App extends React.Component {
   componentWillMount () {
     this.fetchFlatties()
   }
-
+  setFlatties(err, flatties) {
+    console.log({err, flatties});
+    this.setState({err, flatties: flatties || []})
+  }
   fetchFlatties () {
-    return getFlatties()
-      .then(flatties => {
-        this.setState({ flatties: flatties })
-      })
-      .catch(err => {
-        this.setState({ errorMessage: err.message })
-      })
+    getFlatties(this.setFlatties.bind(this))
   }
 
   render () {
