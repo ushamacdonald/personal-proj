@@ -10,4 +10,12 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/shopping', (req,res) => {
+  var knex = req.app.get('db')
+  knex('shoppingList')
+    .then(shoppingList => {
+      res.json(shoppingList)
+    })
+})
+
 module.exports = router

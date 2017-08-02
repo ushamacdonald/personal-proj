@@ -1,1 +1,8 @@
+.flattie {
+  float:left;
+  margin: 5px
+}
 
+.flattiesContainer {
+  height: 250px;
+}
