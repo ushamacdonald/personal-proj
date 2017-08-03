@@ -14,7 +14,7 @@ export default function ShoppingList ({shoppingList, fetchShopping}) {
       <ul>
         {shoppingList.map(renderShopping)}
       </ul>
-      <ShoppingListAdd fetchShopping={fetchShopping}/>
+      <ShoppingListAdd fetchShopping={fetchShopping} />
     </div>
   )
 }

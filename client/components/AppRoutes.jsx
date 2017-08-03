@@ -1,6 +1,7 @@
 import React from 'react'
 import Flatties from './Flatties'
 import ShoppingList from './ShoppingList'
+import NoticeBoard from './NoticeBoard'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 
@@ -16,12 +17,18 @@ class AppRoutes extends React.Component {
                 />
             }
             />
-          <Route
-            path='/' render={(props) =>
-            <ShoppingList shoppingList={this.props.shoppingList} fetchShopping={this.props.fetchShopping} {...props}
-              />
-          }
-          />
+            <Route
+              path='/' render={(props) =>
+              <ShoppingList shoppingList={this.props.shoppingList} fetchShopping={this.props.fetchShopping} {...props}
+                />
+            }
+            />
+            <Route
+              path='/' render={(props) =>
+              <NoticeBoard noticeBoard={this.props.noticeBoard} fetchNotice={this.props.fetchNotice} flatties={this.props.flatties} {...props}
+                />
+            }
+            />
           </div>
         </Router>
       </div>
