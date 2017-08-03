@@ -19,7 +19,6 @@ export function getShopping (callback) {
 }
 
 export function addShopping (item, callback) {
-  console.log(item);
   request
     .post('/v1/flatties/shopping')
     .send({item})

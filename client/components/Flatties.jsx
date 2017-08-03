@@ -6,6 +6,7 @@ const Flatties = ({flatties}) => {
     <div key={id} className="flattie">
       <h1>{name}</h1>
       <img src={image} />
+      <p className="flattieDescr">{description}</p>
     </div>
   )
   return (

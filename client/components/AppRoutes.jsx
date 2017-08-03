@@ -25,7 +25,7 @@ class AppRoutes extends React.Component {
             />
             <Route
               path='/' render={(props) =>
-              <NoticeBoard noticeBoard={this.props.noticeBoard} fetchNotice={this.props.fetchNotice} {...props}
+              <NoticeBoard noticeBoard={this.props.noticeBoard} fetchNotice={this.props.fetchNotice} flatties={this.props.flatties} {...props}
                 />
             }
             />
