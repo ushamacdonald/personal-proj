@@ -5,7 +5,7 @@
 }
 
 .flattiesContainer {
-  height: 270px;
+  height: 300px;
 }
 
 .message {
@@ -21,4 +21,8 @@ input[type=checkbox]:checked + label.strikethrough{
 
 .shopping_li {
   margin-left: -30px;
+}
+
+.flattie_pic {
+  height:140px;
 }

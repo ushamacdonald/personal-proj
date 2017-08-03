@@ -6,7 +6,8 @@ import ShoppingListAdd from './ShoppingListAdd'
 export default function ShoppingList ({shoppingList, fetchShopping}) {
   const renderShopping = ({id, item, done}) => (
     <li className="shopping_li" key={id}><input type="checkbox" name="check" value="1"/>
-             <label className="strikethrough">{item}</label>
+      <label className="strikethrough">{item}</label>
+     
     </li>
   )
 

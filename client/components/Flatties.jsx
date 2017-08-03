@@ -7,11 +7,16 @@ const Flatties = ({flatties}) => {
       <h1>{name}</h1>
       <img className="flattie_pic" src={image} />
       <p className="flattieDescr">{description}</p>
+      <button>Home</button>
     </div>
   )
   return (
-    <div className="flattiesContainer">
-      {flatties.map(renderFlattie)}
+    <div className="flattiesContainer columns">
+      <div className="column"></div>
+      <div className="column is-two-thirds">
+        {flatties.map(renderFlattie)}
+      </div>
+      <div className="column"></div>
     </div>
   )
 }
