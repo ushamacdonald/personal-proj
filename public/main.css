@@ -17,3 +17,14 @@
 .message {
   margin: 10px;
 }
+
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+.shopping_list {
+  list-style-type: none;
+}
+
+.shopping_li {
+  margin-left: -30px;
+}
