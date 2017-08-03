@@ -8,12 +8,17 @@
   height: 270px;
 }
 
-/*.noticeContainer {
-  height: 70px;
-  width: 300px;
-  border: 1px solid;
-  margin-top: 30px;
-}*/
 .message {
   margin: 10px;
+}
+
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+.shopping_list {
+  list-style-type: none;
+}
+
+.shopping_li {
+  margin-left: -30px;
 }
