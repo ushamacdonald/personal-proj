@@ -1,0 +1,7 @@
+{shoppingList.map(shopping => {
+  {shopping.item}
+})}
+
+{shoppingList.map(shopping => {
+  <li>{shopping.item}</li>
+})}
