@@ -1,11 +1,17 @@
 import React from 'react'
-import data from '../../data/data'
 
-const Flatties = props => {
+
+const Flatties = ({flatties}) => {
+  const renderFlattie = ({name, description, at_home, image}, key) => (
+    <div className="flattie">
+      <h1>{name}</h1>
+      <img src={image} />
+    </div>
+  )
   return (
     <div className="container">
       <h2>ppl</h2>
-      {console.log(Object.keys(data))}
+      {flatties.map(renderFlattie)}
     </div>
   )
 }
