@@ -37,3 +37,13 @@ export function getNotice (callback) {
       else callback(null, res.body)
     })
 }
+
+export function addNotice (message, callback) {
+  request
+    .post('/v1/flatties/notice')
+    .send({message})
+    .end((err, res) => {
+      if (err) callback(err)
+      else callback(null, res.body)
+    })
+}

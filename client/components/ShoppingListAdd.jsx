@@ -5,12 +5,8 @@ export default class ShoppingListAdd extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      item: [],
+      item: {},
     }
-  }
-
-  componentDidMount() {
-    this.addItem()
   }
 
   updateSearch(event) {
@@ -28,7 +24,7 @@ export default class ShoppingListAdd extends React.Component {
   render() {
     return (
       <form onSubmit={this.addItem.bind(this)}>
-        <input type="text" name="item" value={this.state.item} onChange={this.updateSearch.bind(this)} />
+        <input type="text" name="item" onChange={this.updateSearch.bind(this)} />
         <input type="submit" value="add" />
       </form>
     )

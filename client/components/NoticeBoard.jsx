@@ -10,6 +10,7 @@ const renderNotice = ({id, message}) => (
 
   return (
     <div className="noticeContainer">
+      <h2>Notice Board</h2>
       {noticeBoard.map(renderNotice)}
     </div>
   )
