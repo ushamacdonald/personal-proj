@@ -36,10 +36,11 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
     "knex": "^0.13.0",
     "migrations": "^0.1.6",
+    "react": "^15.6.1",
     "react-router-dom": "^4.1.2",
     "seeds": "^2.3.1",
     "sqlite3": "^3.1.8",
