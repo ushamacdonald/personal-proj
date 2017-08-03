@@ -29,4 +29,12 @@ router.post('/shopping', (req,res) => {
     })
 })
 
+router.get('/notice', (req,res) => {
+  var knex = req.app.get('db')
+  knex('noticeBoard')
+    .then(noticeBoard => {
+      res.json(noticeBoard)
+    })
+})
+
 module.exports = router

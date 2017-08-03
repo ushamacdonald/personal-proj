@@ -28,3 +28,12 @@ export function addShopping (item, callback) {
       else callback(null, res.body)
     })
 }
+
+export function getNotice (callback) {
+  request
+    .get('/v1/flatties/notice')
+    .end((err, res) => {
+      if (err) callback(err)
+      else callback(null, res.body)
+    })
+}
