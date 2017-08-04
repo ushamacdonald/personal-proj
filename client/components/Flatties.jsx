@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-const Flatties = ({flatties}) => {
+const Flatties = ({flatties, setColour}) => {
   const renderFlattie = ({id, name, description, at_home, image}, key) => (
     <div key={id} className="flattie">
-      <h1>{name}</h1>
+      <h1 className="title is-3">{name}</h1>
       <img className="flattie_pic" src={image} />
       <p className="flattieDescr">{description}</p>
-      <button>Home</button>
+      <button id="button" onClick={() => setColour(button)}>Home</button>
     </div>
   )
   return (

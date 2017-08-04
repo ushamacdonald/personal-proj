@@ -15,12 +15,14 @@ const renderNotice = ({id, message, flattie_id, name }, i) => (
 )
 
   return (
-    <div className="noticeContainer">
-      <h2>Notice Board</h2>
-      <div className="message">
-        {noticeBoard.map(renderNotice)}
+    <div className="noticeContainer columns">
+      <div className="column">
+        <h2 className="title is-2">Notice Board</h2>
+        <div className="my_message">
+          {noticeBoard.map(renderNotice)}
+        </div>
+        <NoticeBoardAdd flatties={flatties} fetchNotice={fetchNotice} />
       </div>
-      <NoticeBoardAdd flatties={flatties} fetchNotice={fetchNotice} />
     </div>
   )
 }

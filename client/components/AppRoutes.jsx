@@ -13,19 +13,19 @@ class AppRoutes extends React.Component {
           <div>
             <Route
               exact path='/' render={(props) =>
-              <Flatties flatties={this.props.flatties} fetchFlatties={this.props.fetchFlatties} {...props}
+              <Flatties flatties={this.props.flatties} fetchFlatties={this.props.fetchFlatties} setColour={this.props.setColour}
                 />
             }
             />
             <Route
               path='/' render={(props) =>
-              <ShoppingList shoppingList={this.props.shoppingList} fetchShopping={this.props.fetchShopping} {...props}
+              <ShoppingList shoppingList={this.props.shoppingList} fetchShopping={this.props.fetchShopping} deleteItem={this.props.deleteItem}
                 />
             }
             />
             <Route
               path='/' render={(props) =>
-              <NoticeBoard noticeBoard={this.props.noticeBoard} fetchNotice={this.props.fetchNotice} flatties={this.props.flatties} {...props}
+              <NoticeBoard noticeBoard={this.props.noticeBoard} fetchNotice={this.props.fetchNotice} flatties={this.props.flatties}
                 />
             }
             />
