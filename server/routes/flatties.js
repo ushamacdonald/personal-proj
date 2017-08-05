@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-
 router.get('/', (req, res) => {
   var knex = req.app.get('db')
   knex('flatties')
@@ -28,6 +27,17 @@ router.post('/shopping', (req,res) => {
     })
 })
 
+router.delete('/shopping/:id', (req, res) => {
+  var knex = req.app.get('db')
+  var id = req.params.id
+  knex('shoppingList')
+    .where('id', id)
+    .del()
+    .then(shoppingList => {
+      res.json(shoppingList)
+    })
+})
+
 router.get('/notice', (req,res) => {
   var knex = req.app.get('db')
   knex('noticeBoard')
@@ -40,7 +50,6 @@ router.get('/notice', (req,res) => {
 router.post('/notice', (req,res) => {
   var knex = req.app.get('db')
   var insert = {message: req.body.message}
-  console.log(req.body);
   knex('noticeBoard')
     .insert(req.body.message)
     .then(noticeBoard => {
