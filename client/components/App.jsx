@@ -16,12 +16,13 @@ class App extends React.Component {
     this.fetchFlatties = this.fetchFlatties.bind(this)
   }
 
-  componentDidMount() {
-    getMovie((data) => {
-      let movie = data.results[0]
-      console.log(movie)
-    })
-  }
+  // componentDidMount() {
+  //   getMovie(console.log)
+  //   getMovie((data) => {
+  //     let movie = data.results[0]
+  //     console.log(movie)
+  //   })
+  // }
 
   componentWillMount () {
     this.fetchFlatties()

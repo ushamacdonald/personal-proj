@@ -2,8 +2,8 @@ import React from 'react'
 import Flatties from './Flatties'
 import ShoppingList from './ShoppingList'
 import NoticeBoard from './NoticeBoard'
+import AddMovie from './AddMovie'
 import {HashRouter as Router, Route} from 'react-router-dom'
-
 
 class AppRoutes extends React.Component {
   render () {
@@ -29,6 +29,7 @@ class AppRoutes extends React.Component {
                 />
             }
             />
+          <AddMovie />
           </div>
         </Router>
       </div>
