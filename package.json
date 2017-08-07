@@ -40,6 +40,8 @@
     "express": "^4.14.0",
     "knex": "^0.13.0",
     "migrations": "^0.1.6",
+    "moment": "^2.18.1",
+    "react-big-calendar": "^0.14.4",
     "react-router-dom": "^4.1.2",
     "seeds": "^2.3.1",
     "sqlite3": "^3.1.8",
