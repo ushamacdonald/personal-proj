@@ -23,9 +23,18 @@ export default class ShoppingListAdd extends React.Component {
 
   render() {
     return (
+
       <form onSubmit={this.addItem.bind(this)}>
-        <input type="text" name="item" value={this.state.item} onChange={this.updateItem.bind(this)} />
-        <input type="submit" value="add" />
+        <div className="field">
+          <div className="control">
+            <input className="input" type="text" name="item" value={this.state.item} onChange={this.updateItem.bind(this)} />
+          </div>
+        </div>
+        <div className="field">
+          <div className="control is-pulled-right">
+            <input className="button is-primary" type="submit" value="add" />
+          </div>
+        </div>
       </form>
     )
   }

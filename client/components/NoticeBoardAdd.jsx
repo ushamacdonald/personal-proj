@@ -23,14 +23,32 @@ export default class NoticeBoardAdd extends React.Component {
   render() {
     return (
       <form onSubmit={this.addMessage.bind(this)}>
-        <input type="text" name="message" onChange={this.updateMessage.bind(this)} />
-        <select name="flattie_id" onChange={this.updateMessage.bind(this)}>
-          <option selected disabled>Flattie</option>
-          {this.props.flatties.map((flattie, i) => {
-            return <option key={i} value={flattie.id}>{flattie.name}</option>
-          })}
-        </select>
-        <input type="submit" value="add" />
+
+        <div className="field">
+          <div className="control">
+            <input className="input" type="text" name="message" onChange={this.updateMessage.bind(this)} />
+          </div>
+        </div>
+
+        <div className="field is-grouped is-pulled-right">
+          <div className="control">
+            <div className="select">
+              <select name="flattie_id" onChange={this.updateMessage.bind(this)}>
+                <option selected disabled>Flattie</option>
+                  {this.props.flatties.map((flattie, i) => {
+                    return <option key={i} value={flattie.id}>{flattie.name}</option>
+                  })}
+              </select>
+            </div>
+          </div>
+          <div className="control">
+            <input className="button is-primary" type="submit" value="add" />
+          </div>
+        </div>
+
+
+
+
       </form>
     )
   }

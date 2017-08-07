@@ -11,18 +11,14 @@ class App extends React.Component {
       shoppingList: [],
       noticeBoard: [],
       errorMessage: '',
+
       // movie: {results:[]}
     }
     this.fetchFlatties = this.fetchFlatties.bind(this)
+
   }
 
-  // componentDidMount() {
-  //   getMovie(console.log)
-  //   getMovie((data) => {
-  //     let movie = data.results[0]
-  //     console.log(movie)
-  //   })
-  // }
+
 
   componentWillMount () {
     this.fetchFlatties()
@@ -71,7 +67,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <div>
-          {this.state.movie}
+
         </div>
         <AppRoutes
         flatties={this.state.flatties} fetchFlatties={this.fetchFlatties}

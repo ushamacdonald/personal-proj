@@ -6,9 +6,15 @@ import AddMovie from './AddMovie'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 class AppRoutes extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+    }
+  }
+
   render () {
     return (
-      <div className="appContainer">
+      <div className="appContainer ">
         <Router>
           <div>
             <Route
@@ -17,6 +23,7 @@ class AppRoutes extends React.Component {
                 />
             }
             />
+          <div className="columns">
             <Route
               path='/' render={(props) =>
               <ShoppingList shoppingList={this.props.shoppingList} fetchShopping={this.props.fetchShopping} deleteItem={this.props.deleteItem}
@@ -29,6 +36,8 @@ class AppRoutes extends React.Component {
                 />
             }
             />
+          <div className="column is-6"></div>
+          </div>
           <AddMovie />
           </div>
         </Router>
