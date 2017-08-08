@@ -3,8 +3,8 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTableIfNotExists('events', function (table) {
     table.increments('id');
     table.string('title');
-    table.date('start');
-    table.date('end')
+    table.string('start');
+    table.string('end')
     table.integer('noticeBoard_id')
   })
 };

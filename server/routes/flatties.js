@@ -43,7 +43,12 @@ router.get('/notice', (req,res) => {
   knex('noticeBoard')
     .join('flatties', 'flatties.id', '=', 'flattie_id')
     .then(noticeBoard => {
-      res.json(noticeBoard)
+      knex('events')
+        .orderBy('start', 'desc')
+        .then((events) => {
+          res.json({noticeBoard, events})
+
+        })
     })
 })
 
@@ -55,6 +60,20 @@ router.post('/notice', (req,res) => {
     .then(noticeBoard => {
       res.json(noticeBoard)
     })
+})
+
+router.post('/events', (req, res) => {
+  console.log(req.body);
+  var knex = req.app.get('db')
+  knex('events')
+    .insert(req.body)
+    .then(() => {
+      res.status(201)
+    })
+    .catch((err) => {
+      res.status(500).send(err + ' SERVER ERR')
+    })
+  res.send('memes')
 })
 
 module.exports = router

@@ -10,6 +10,7 @@ class App extends React.Component {
       flatties: [],
       shoppingList: [],
       noticeBoard: [],
+      events: [],
       errorMessage: '',
 
       // movie: {results:[]}
@@ -19,7 +20,14 @@ class App extends React.Component {
   }
 
 
-
+  formatDate(stringDate) {
+    let start = stringDate.start.split('-')
+    stringDate.og = [...start].join('-')
+    start = new Date([...start])
+    stringDate.start = start
+    stringDate.end = start
+    return stringDate
+  }
   componentWillMount () {
     this.fetchFlatties()
     this.fetchShopping()
@@ -39,8 +47,10 @@ class App extends React.Component {
     getShopping(this.setShopping.bind(this))
   }
 
-  setNotice(err, noticeBoard) {
-    this.setState({err, noticeBoard: noticeBoard || []})
+  setNotice(err, {noticeBoard, events}) {
+    events = events.map(this.formatDate)
+    console.log({noticeBoard, events});
+    this.setState({err, noticeBoard: noticeBoard || [], events: events || []})
   }
 
   fetchNotice () {
@@ -74,6 +84,7 @@ class App extends React.Component {
         shoppingList={this.state.shoppingList} fetchShopping={this.fetchShopping.bind(this)} deleteItem={this.deleteItem.bind(this)}
         noticeBoard={this.state.noticeBoard} fetchNotice={this.fetchNotice.bind(this)}
         setColour={this.state.setColour}
+        events={this.state.events}
         />
       {this.state.errorMessage &&
         <h1>{this.state.errorMessage}</h1>

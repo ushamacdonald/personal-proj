@@ -73,3 +73,13 @@ export function fetchDeleteItem (id, callback) {
       else callback(null, res.body)
     })
 }
+
+export function postEventRequest (newEvent, callback) {
+  request
+    .post('/v1/flatties/events')
+    .send(newEvent)
+    .end((err, res) => {
+      if (err) callback(err)
+      else callback(null)
+    })
+}

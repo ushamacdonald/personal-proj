@@ -11,7 +11,7 @@ export default function ShoppingList ({shoppingList, fetchShopping, deleteItem})
   )
 
   return (
-    <div className="shoppingContainer column is-3">
+    <div className="shoppingContainer column is-6">
       <h2 className="title is-2">Shopping List</h2>
       <ul className="shopping_list">
         {shoppingList.map(renderShopping)}

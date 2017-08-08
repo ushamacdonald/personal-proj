@@ -1,55 +1,39 @@
 import React from 'react'
 import {addNotice} from '../api/api'
+import NoticeBoardMessage from './NoticeBoardMessage'
+import NoticeBoardEvent from './NoticeBoardEvent'
 
 
 export default class NoticeBoardAdd extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      isMessage: true
     }
   }
-
-  updateMessage(event) {
-    this.setState({[event.target.name]: event.target.value})
+  changeFormType(e) {
+    this.setState({isMessage: e.target.value})
   }
-
-  addMessage(e) {
-    e.preventDefault()
-    e.target.reset()
-    addNotice(this.state, this.props.fetchNotice)
-
-  }
-
   render() {
     return (
-      <form onSubmit={this.addMessage.bind(this)}>
-
-        <div className="field">
-          <div className="control">
-            <input className="input" type="text" name="message" onChange={this.updateMessage.bind(this)} />
-          </div>
-        </div>
-
-        <div className="field is-grouped is-pulled-right">
-          <div className="control">
-            <div className="select">
-              <select name="flattie_id" onChange={this.updateMessage.bind(this)}>
-                <option selected disabled>Flattie</option>
-                  {this.props.flatties.map((flattie, i) => {
-                    return <option key={i} value={flattie.id}>{flattie.name}</option>
-                  })}
-              </select>
+      <div>
+        <form >
+          <div className="field">
+            <div className="control">
+              <div className="select">
+                <select onChange={this.changeFormType.bind(this)}>
+                  <option selected value={true}>Message</option>
+                  <option value={false}>Event</option>
+                </select>
+              </div>
             </div>
           </div>
-          <div className="control">
-            <input className="button is-primary" type="submit" value="add" />
-          </div>
-        </div>
-
-
-
-
-      </form>
+        </form>
+          {this.state.isMessage == true
+            ? <NoticeBoardMessage fetchNotice={this.props.fetchNotice} flatties={this.props.flatties} />
+          : <NoticeBoardEvent fetchNotice={this.props.fetchNotice}/>
+          }
+      </div>
     )
   }
 }

@@ -34,3 +34,11 @@ input[type=checkbox]:checked + label.strikethrough{
 .flattie_title {
   margin-bottom :5px!important;
 }
+
+.cal_container {
+  height:400px!important;
+}
+
+.cal_header {
+  text-align: center;
+}

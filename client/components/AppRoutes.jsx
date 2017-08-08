@@ -39,15 +39,17 @@ class AppRoutes extends React.Component {
             />
             <Route
               path='/' render={(props) =>
-              <NoticeBoard noticeBoard={this.props.noticeBoard} fetchNotice={this.props.fetchNotice} flatties={this.props.flatties}
+              <NoticeBoard noticeBoard={this.props.noticeBoard} events={this.props.events} fetchNotice={this.props.fetchNotice} flatties={this.props.flatties}
                 />
             }
             />
-            <div className="column is-6">
-              <BigCalendar {...this.props} events={events} views={allViews} defaultDate={new Date(2017, 7, 1)} />
+        </div>
+          <div className="columns">
+            <div className="column cal_container">
+              <h2 className="title is-2 cal_header">Calendar</h2>
+              <BigCalendar {...this.props} events={this.props.events} views={allViews} defaultDate={new Date()} />
             </div>
           </div>
-          <AddMovie />
           </div>
         </Router>
       </div>
