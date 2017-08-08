@@ -14,6 +14,7 @@ export default class AddMovie extends React.Component {
     this.setState({movieData:movieData.results[0], foundMovie: true})
   }
   updateSearch(e) {
+    console.log(e.target.value.split('-'));
     this.setState({movie_name: e.target.value})
   }
   searchMovie(e) {
@@ -32,7 +33,7 @@ export default class AddMovie extends React.Component {
 
         </div>}
         <form onSubmit={this.searchMovie.bind(this)}>
-          <input name="movie_name" placeholder="movie title" onChange={this.updateSearch.bind(this)}/>
+          <input type="date" name="movie_name" placeholder="movie title" onChange={this.updateSearch.bind(this)}/>
           <input type="submit" />
         </form>
       </div>

@@ -9,6 +9,7 @@ import moment from 'moment'
 import events from '../events'
 
 BigCalendar.momentLocalizer(moment)
+
 let allViews = Object.keys(BigCalendar.views).map(k => BigCalendar.views[k])
 
 class AppRoutes extends React.Component {
@@ -42,13 +43,9 @@ class AppRoutes extends React.Component {
                 />
             }
             />
-          <div className="column is-6">
-            <BigCalendar
-        {...this.props}
-        events={events}
-        views={allViews}
-        defaultDate={new Date(2015, 3, 1)}
-      /> </div>
+            <div className="column is-6">
+              <BigCalendar {...this.props} events={events} views={allViews} defaultDate={new Date(2017, 7, 1)} />
+            </div>
           </div>
           <AddMovie />
           </div>

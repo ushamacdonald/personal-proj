@@ -5,7 +5,7 @@ import NoticeBoardAdd from './NoticeBoardAdd'
 
 export default function NoticeBoard ({noticeBoard, fetchNotice, flatties}) {
 
-const renderNotice = ({id, message, flattie_id, name }, i) => (
+const renderNotice = ({id, message, flattie_id, name}, i) => (
   <div key={i}>
     <p>
     <b>Message: </b>{message} <b>From: </b> {name}
