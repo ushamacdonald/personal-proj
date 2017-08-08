@@ -5,7 +5,7 @@
 }
 
 .flattiesContainer {
-  /*height: 300px;*/
+  margin-top: 20px;
 }
 
 .my_message {
@@ -29,4 +29,8 @@ input[type=checkbox]:checked + label.strikethrough{
 
 .shoppingContainer {
   margin-bottom: 10px;
+}
+
+.flattie_title {
+  margin-bottom :5px!important;
 }
