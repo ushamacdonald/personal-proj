@@ -1,10 +1,20 @@
 import request from 'superagent'
 
-export function getMovie (callback) {
+
+export function getMovie (movie_name, callback) {
+  console.log({movie_name});
   request
-    .get('https://api.themoviedb.org/3/discover/movie?with_genres=18&sort_by=popularity&api_key=d525f9f9d33e5e0eb93d55918d54b51e&language=en-US')
+    .get('https://api.themoviedb.org/3/search/movie')
+    .query({
+      // with_genres: 18,
+      query: movie_name,
+      sort_by: 'vote_average.desc',
+      api_key: 'd525f9f9d33e5e0eb93d55918d54b51e',
+      language: "en-US"
+    })
     .end((err, res) => {
-      callback(res.body)
+      // console.log(res.body);
+      callback(err, res.body)
     })
 }
 
