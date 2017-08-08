@@ -9,7 +9,7 @@ export default function NoticeBoard ({events, noticeBoard, fetchNotice, flatties
 const renderNotice = ({id, message, flattie_id, name}, i) => (
   <div key={i}>
     <p>
-    <b>Message: </b>{message} <b>From: </b> {name}
+    <b>{message}</b> - {name}
     </p>
 
   </div>
@@ -20,10 +20,12 @@ const renderNotice = ({id, message, flattie_id, name}, i) => (
       <div className="">
         <h2 className="title is-2">Notice Board</h2>
         <div className="my_message">
+          <h2 className="title is-3">Messages</h2>
+
           {noticeBoard.map(renderNotice)}
         </div>
-        <NoticeBoardAdd flatties={flatties} fetchNotice={fetchNotice} />
         <TodaysEvents events={events}/>
+        <NoticeBoardAdd flatties={flatties} fetchNotice={fetchNotice} />
       </div>
     </div>
   )

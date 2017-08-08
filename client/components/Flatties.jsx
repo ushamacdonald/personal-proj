@@ -7,7 +7,6 @@ const Flatties = ({flatties, setColour}) => {
       <h1 className="title is-3 flattie_title">{name}</h1>
       <img className="flattie_pic" src={image} />
       <p className="flattieDescr">{description}</p>
-      <a className="button is-primary" onClick={() => setColour(button)}>Home</a>
     </div>
   )
   return (

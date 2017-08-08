@@ -42,3 +42,8 @@ input[type=checkbox]:checked + label.strikethrough{
 .cal_header {
   text-align: center;
 }
+
+.todaysEvents {
+  margin-bottom: 10px;
+  
+}
