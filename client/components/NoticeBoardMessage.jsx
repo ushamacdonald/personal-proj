@@ -6,7 +6,6 @@ export default class NoticeBoardMessage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
     }
   }
 
@@ -18,7 +17,7 @@ export default class NoticeBoardMessage extends React.Component {
     e.preventDefault()
     e.target.reset()
     addNotice(this.state, this.props.fetchNotice)
-
+    console.log("hi");
   }
 
   render() {
