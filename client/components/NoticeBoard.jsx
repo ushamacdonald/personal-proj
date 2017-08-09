@@ -16,7 +16,7 @@ const renderNotice = ({id, message, flattie_id, name}, i) => (
 )
 
   return (
-    <div className="noticeContainer column is-6">
+    <div className="noticeContainer column">
       <div className="">
         <h2 className="title is-2">Notice Board</h2>
         <div className="my_message">

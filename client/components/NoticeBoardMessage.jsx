@@ -23,7 +23,7 @@ export default class NoticeBoardMessage extends React.Component {
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.updateMessage.bind(this)}>
         <div className="field">
           <div className="control">
             <input className="input" type="text" name="message" onChange={this.updateMessage.bind(this)} />
@@ -45,7 +45,7 @@ export default class NoticeBoardMessage extends React.Component {
             <input className="button is-primary" type="submit" value="add message" />
           </div>
         </div>
-      </div>
+      </form>
     )
   }
 }

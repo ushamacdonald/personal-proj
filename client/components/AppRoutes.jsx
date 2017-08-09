@@ -21,7 +21,7 @@ class AppRoutes extends React.Component {
 
   render () {
     return (
-      <div className="appContainer ">
+      <div className="appContainer container ">
         <Router>
           <div>
             <Route

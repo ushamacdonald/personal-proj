@@ -10,9 +10,7 @@ export default function TodaysEvents ({events}) {
   return (
     <div className="todaysEvents">
       <h2 className="title is-3">Today's Events</h2>
-      <p>
-        {events.map((event, i) => <h1 key={i}>{event.title}</h1>)}
-      </p>
+        {events.map((event, i) => <p key={i}>{event.title}</p>)}
     </div>
   )
 }

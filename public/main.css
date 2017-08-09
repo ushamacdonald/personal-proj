@@ -19,9 +19,7 @@ input[type=checkbox]:checked + label.strikethrough{
   list-style-type: none;
 }
 
-.shopping_li {
-  /*margin-left: -30px;*/
-}
+
 
 .flattie_pic {
   height:140px;
@@ -45,5 +43,5 @@ input[type=checkbox]:checked + label.strikethrough{
 
 .todaysEvents {
   margin-bottom: 10px;
-  
+
 }

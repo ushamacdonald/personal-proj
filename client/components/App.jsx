@@ -75,17 +75,16 @@ class App extends React.Component {
 
   render () {
     return (
-      <div className="container">
-        <div>
-
-        </div>
-        <AppRoutes
-        flatties={this.state.flatties} fetchFlatties={this.fetchFlatties}
-        shoppingList={this.state.shoppingList} fetchShopping={this.fetchShopping.bind(this)} deleteItem={this.deleteItem.bind(this)}
-        noticeBoard={this.state.noticeBoard} fetchNotice={this.fetchNotice.bind(this)}
-        setColour={this.state.setColour}
-        events={this.state.events}
-        />
+      <div className="container app-container">
+        <section className="section app-body">
+          <AppRoutes
+          flatties={this.state.flatties} fetchFlatties={this.fetchFlatties}
+          shoppingList={this.state.shoppingList} fetchShopping={this.fetchShopping.bind(this)} deleteItem={this.deleteItem.bind(this)}
+          noticeBoard={this.state.noticeBoard} fetchNotice={this.fetchNotice.bind(this)}
+          setColour={this.state.setColour}
+          events={this.state.events}
+          />
+        </section>
       {this.state.errorMessage &&
         <h1>{this.state.errorMessage}</h1>
       }
