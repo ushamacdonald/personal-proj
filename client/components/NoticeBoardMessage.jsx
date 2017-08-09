@@ -17,12 +17,12 @@ export default class NoticeBoardMessage extends React.Component {
     e.preventDefault()
     e.target.reset()
     addNotice(this.state, this.props.fetchNotice)
-    console.log("hi");
+
   }
 
   render() {
     return (
-      <form onSubmit={this.updateMessage.bind(this)}>
+      <form onSubmit={this.addMessage.bind(this)}>
         <div className="field">
           <div className="control">
             <input className="input" type="text" name="message" onChange={this.updateMessage.bind(this)} />

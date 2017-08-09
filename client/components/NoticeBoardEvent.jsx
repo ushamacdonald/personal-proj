@@ -15,6 +15,7 @@ export default class NoticeBoardEvent extends React.Component {
     let {newEvent} = this.state
     newEvent.end = newEvent.start
     postEventRequest(newEvent, this.props.fetchNotice)
+    this.props.changeFormType('message')
   }
   updateEventDetails(e) {
     let {newEvent} = this.state

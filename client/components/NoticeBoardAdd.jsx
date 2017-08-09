@@ -8,30 +8,32 @@ export default class NoticeBoardAdd extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isMessage: true
+      type: "message"
     }
   }
-  changeFormType(e) {
-    this.setState({isMessage: e.target.value})
+  changeFormType(type) {
+    console.log({type});
+    this.setState({type: type})
   }
   render() {
+    console.log("rerender");
     return (
       <div>
         <form >
           <div className="field">
             <div className="control">
               <div className="select">
-                <select onChange={this.changeFormType.bind(this)}>
-                  <option selected value={true}>Message</option>
-                  <option value={false}>Event</option>
+                <select onChange={(e) => this.changeFormType(e.target.value)}>
+                  <option selected value={"message"}>Message</option>
+                  <option value={"event"}>Event</option>
                 </select>
               </div>
             </div>
           </div>
         </form>
-          {this.state.isMessage == true
+          {this.state.type === "message"
             ? <NoticeBoardMessage fetchNotice={this.props.fetchNotice} flatties={this.props.flatties} />
-          : <NoticeBoardEvent fetchNotice={this.props.fetchNotice}/>
+          : <NoticeBoardEvent changeFormType={this.changeFormType.bind(this)} fetchNotice={this.props.fetchNotice}/>
           }
       </div>
     )
