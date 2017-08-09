@@ -6,7 +6,7 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('flatties').insert([
         {id: 1, name:'Leah' , description:'Nana' , image:'/images/leah.png', at_home: false},
-        {id: 2, name:'Matt' , description:'Chilldude' , image:'/images/matt.png', at_home: false},
+        {id: 2, name:'Matt' , description:'Chill dude' , image:'/images/matt.png', at_home: false},
         {id: 3, name:'Amelie' , description:'Mum' , image:'/images/amelie.png', at_home: false},
         {id: 4, name:'Usha' , description:'Baby' , image:'/images/usha.png', at_home: false}
       ]);
