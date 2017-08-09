@@ -24,8 +24,8 @@ export default class NoticeBoardAdd extends React.Component {
             <div className="control">
               <div className="select">
                 <select onChange={(e) => this.changeFormType(e.target.value)}>
-                  <option selected value={"message"}>Message</option>
-                  <option value={"event"}>Event</option>
+                  <option selected={this.state.type == "message"} value={"message"}>Message</option>
+                  <option selected={this.state.type == "event"} value={"event"}>Event</option>
                 </select>
               </div>
             </div>
